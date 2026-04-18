@@ -1,11 +1,11 @@
 export const projects = [
   {
     id: 1,
-    title: "FullStack Social Media MERN App",
+    title: "Pluto (FullStack Social Media)",
     description: "A comprehensive social media platform with real-time interactions, post sharing, likes, and a dynamic feed. Features a responsive modern UI.",
     techStack: ["React", "Node.js", "Express", "MongoDB", "Redux", "Tailwind CSS"],
-    github: "https://github.com/ArpanBanik007",
-    image: "https://placehold.co/600x400/1e1e1e/0ea5e9?text=Social+Media+App"
+    github: "https://github.com/ArpanBanik007/FullStack-Social-Media-MERN-",
+    image: "/pluto-ss.png"
   },
   {
     id: 2,
