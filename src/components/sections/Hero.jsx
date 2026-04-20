@@ -86,7 +86,7 @@ const Hero = () => {
             Contact Me
           </Link>
           <a
-            href="/Arpan_Banik_Resume.pdf"
+            href="/Arpan Banik.Resume (2).pdf"
             download="Arpan_Banik_Resume.pdf"
             className="px-8 py-3 rounded-full bg-white text-black font-bold hover:bg-gray-200 transition-all shadow-[0_0_15px_rgba(255,255,255,0.5)] cursor-pointer flex items-center gap-2"
           >

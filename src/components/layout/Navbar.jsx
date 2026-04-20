@@ -45,7 +45,7 @@ const Navbar = () => {
             </Link>
           ))}
           <a
-            href="/Arpan_Banik_Resume.pdf"
+            href="/Arpan Banik.Resume (2).pdf"
             download="Arpan_Banik_Resume.pdf"
             className="px-5 py-2 rounded-full bg-primary/10 text-primary border border-primary/50 hover:bg-primary hover:text-white transition-all duration-300 shadow-[0_0_10px_rgba(14,165,233,0.2)] hover:shadow-[0_0_20px_rgba(14,165,233,0.6)]"
           >
@@ -75,7 +75,7 @@ const Navbar = () => {
             </Link>
           ))}
           <a
-            href="/Arpan_Banik_Resume.pdf"
+            href="/Arpan Banik.Resume (2).pdf"
             download="Arpan_Banik_Resume.pdf"
             className="px-6 py-2 mt-2 rounded-full bg-primary text-white shadow-[0_0_15px_rgba(14,165,233,0.5)]"
           >
