@@ -6,14 +6,40 @@ import { developerInfo } from '../../data/constants';
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
+  const [status, setStatus] = useState({ type: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const mailtoLink = `mailto:${developerInfo.email}?subject=Contact from ${formData.name}&body=${formData.message} (%0A%0A From: ${formData.email})`;
-    window.location.href = mailtoLink;
+    setIsSubmitting(true);
+    setStatus({ type: '', message: '' });
+
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus({ type: 'success', message: 'Message sent successfully!' });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus({ type: 'error', message: data.error || 'Failed to send message.' });
+      }
+    } catch (error) {
+      setStatus({ type: 'error', message: 'Network error. Please check if the backend is running.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -137,12 +163,19 @@ const Contact = () => {
                   placeholder="How can I help you?"
                 ></textarea>
               </div>
+
+              {status.message && (
+                <div className={`p-4 rounded-lg text-sm font-medium ${status.type === 'success' ? 'bg-green-500/10 text-green-400 border border-green-500/20' : 'bg-red-500/10 text-red-400 border border-red-500/20'}`}>
+                  {status.message}
+                </div>
+              )}
               
               <button 
                 type="submit" 
-                className="w-full py-4 rounded-lg bg-primary text-white font-bold tracking-wide hover:bg-sky-400 transition-colors shadow-[0_0_15px_rgba(14,165,233,0.4)] flex justify-center items-center gap-2"
+                disabled={isSubmitting}
+                className={`w-full py-4 rounded-lg bg-primary text-white font-bold tracking-wide hover:bg-sky-400 transition-colors shadow-[0_0_15px_rgba(14,165,233,0.4)] flex justify-center items-center gap-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
-                Send Message <FiSend />
+                {isSubmitting ? 'Sending...' : 'Send Message'} <FiSend className={isSubmitting ? 'animate-bounce' : ''} />
               </button>
             </form>
           </motion.div>
