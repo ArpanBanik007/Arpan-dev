@@ -14,7 +14,7 @@ const allowedOrigins = [
   'http://127.0.0.1:5173',
   'http://localhost:3000',
   'http://localhost:5000',
-  'https://arpan-dev-six.vercel.app',
+  'https://arpan-two.vercel.app',
   'https://arpan-banik-portfolio.vercel.app'
 ];
 
