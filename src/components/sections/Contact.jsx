@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { FiMail, FiMapPin, FiPhone, FiSend, FiMessageSquare } from 'react-icons/fi';
 import { developerInfo } from '../../data/constants';
 
+const API_URL = 'http://localhost:5000/api/contact';
+
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
@@ -19,7 +21,7 @@ const Contact = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch(API_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
