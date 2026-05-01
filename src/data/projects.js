@@ -5,6 +5,7 @@ export const projects = [
     description: "A comprehensive social media platform with real-time interactions, post sharing, likes, and a dynamic feed. Features a responsive modern UI.",
     techStack: ["React", "Node.js", "Express", "MongoDB", "Redux", "Tailwind CSS"],
     github: "https://github.com/ArpanBanik007/FullStack-Social-Media-MERN-",
+    demo: "https://pluto-alpha-ochre.vercel.app/",
     image: "/pluto-ss.png"
   },
   {

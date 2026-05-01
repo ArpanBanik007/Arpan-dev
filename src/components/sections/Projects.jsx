@@ -67,14 +67,25 @@ const ProjectCard = ({ project, index }) => {
             >
               <FiGithub className="text-lg" /> Code
             </a>
-            <a 
-              href="#"
-              onClick={(e) => e.preventDefault()}
-              className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 text-sm font-medium opacity-50 cursor-not-allowed"
-              title="Demo not available yet"
-            >
-              <FiExternalLink className="text-lg" /> Live
-            </a>
+            {project.demo ? (
+              <a 
+                href={project.demo} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 text-sm font-medium"
+              >
+                <FiExternalLink className="text-lg" /> Live
+              </a>
+            ) : (
+              <a 
+                href="#"
+                onClick={(e) => e.preventDefault()}
+                className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 text-sm font-medium opacity-50 cursor-not-allowed"
+                title="Demo not available yet"
+              >
+                <FiExternalLink className="text-lg" /> Live
+              </a>
+            )}
           </div>
         </div>
       </motion.div>
