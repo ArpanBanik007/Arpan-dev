@@ -27,9 +27,15 @@ const Navbar = () => {
   return (
     <header className={`fixed top-0 w-full z-40 transition-all duration-300 ${isScrolled ? 'glass py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-6 md:px-12 xl:px-20 flex justify-between items-center">
-        <div className="text-2xl font-poppins font-bold gradient-text cursor-pointer hover:scale-105 transition-transform">
+        <Link
+          to="hero"
+          smooth={true}
+          duration={500}
+          onClick={() => setIsMobileMenuOpen(false)}
+          className="text-2xl font-poppins font-bold gradient-text cursor-pointer hover:scale-105 transition-transform"
+        >
           ARPAN BANIK
-        </div>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-6 lg:gap-8 items-center">
