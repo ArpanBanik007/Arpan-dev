@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiMail, FiMapPin, FiPhone, FiSend, FiMessageSquare } from 'react-icons/fi';
+import { FiMail, FiMapPin, FiPhone, FiSend, FiMessageSquare, FiDownload, FiLinkedin, FiGithub } from 'react-icons/fi';
 import { developerInfo } from '../../data/constants';
 
 const API_URL = 'http://localhost:5000/api/contact';
@@ -37,7 +37,7 @@ const Contact = () => {
       } else {
         setStatus({ type: 'error', message: data.error || 'Failed to send message.' });
       }
-    } catch (error) {
+    } catch {
       setStatus({ type: 'error', message: 'Network error. Please check if the backend is running.' });
     } finally {
       setIsSubmitting(false);
@@ -47,6 +47,60 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 relative">
       <div className="container mx-auto px-6 md:px-12 xl:px-20">
+        {/* Looking for the Next Opportunity Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="glass p-8 md:p-12 rounded-3xl border border-primary/30 max-w-5xl mx-auto mb-20 relative overflow-hidden text-center shadow-[0_0_30px_rgba(14,165,233,0.15)]"
+        >
+          <div className="absolute -top-24 -left-24 w-48 h-48 bg-primary/20 rounded-full blur-[70px] -z-10" />
+          <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-purple-500/20 rounded-full blur-[70px] -z-10" />
+
+          <span className="inline-block px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-mono mb-4">
+            Actively Available
+          </span>
+          <h3 className="text-2xl md:text-4xl font-poppins font-bold text-white mb-3">
+            Looking for the Next Opportunity
+          </h3>
+          <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
+            Open for <span className="text-primary font-medium">Software Engineering Internships</span>, <span className="text-primary font-medium">Full-Stack Developer</span> roles, and <span className="text-primary font-medium">AI-powered application development</span> opportunities.
+          </p>
+
+          <div className="flex flex-wrap justify-center items-center gap-4">
+            <a
+              href="/Arpan Banik.Resume (2).pdf"
+              download="Arpan_Banik_Resume.pdf"
+              className="px-6 py-3 rounded-full bg-primary text-white font-medium hover:bg-sky-400 transition-all shadow-[0_0_15px_rgba(14,165,233,0.4)] flex items-center gap-2 cursor-pointer text-sm"
+            >
+              <FiDownload /> Download Resume
+            </a>
+            <a
+              href={developerInfo.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-full glass border border-cardBorder text-gray-200 hover:text-white hover:border-primary/50 transition-all flex items-center gap-2 text-sm"
+            >
+              <FiLinkedin className="text-primary" /> LinkedIn
+            </a>
+            <a
+              href={developerInfo.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-full glass border border-cardBorder text-gray-200 hover:text-white hover:border-primary/50 transition-all flex items-center gap-2 text-sm"
+            >
+              <FiGithub className="text-primary" /> GitHub
+            </a>
+            <a
+              href={`mailto:${developerInfo.email}`}
+              className="px-6 py-3 rounded-full glass border border-cardBorder text-gray-200 hover:text-white hover:border-primary/50 transition-all flex items-center gap-2 text-sm"
+            >
+              <FiMail className="text-primary" /> Email Me
+            </a>
+          </div>
+        </motion.div>
+
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}

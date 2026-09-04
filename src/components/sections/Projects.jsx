@@ -47,13 +47,50 @@ const ProjectCard = ({ project, index }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80" />
         </div>
         <div className="p-6 relative z-10 -mt-8 flex-grow flex flex-col">
-          <h3 className="text-xl font-poppins font-bold text-white mb-2 tracking-wide group-hover:text-primary transition-colors">{project.title}</h3>
-          <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+          {project.category && (
+            <div className="mb-2">
+              <span className="text-[11px] font-mono text-primary bg-primary/10 px-2.5 py-0.5 rounded-full border border-primary/25">
+                {project.category}
+              </span>
+            </div>
+          )}
+
+          <h3 className="text-xl font-poppins font-bold text-white mb-2 tracking-wide group-hover:text-primary transition-colors">
+            {project.title}
+          </h3>
+
+          {project.problem && (
+            <div className="mb-3 text-xs text-gray-400 bg-white/[0.02] p-2.5 rounded-lg border border-cardBorder">
+              <span className="font-semibold text-gray-200">Challenge: </span>
+              {project.problem}
+            </div>
+          )}
+
+          <p className="text-gray-300 text-xs md:text-sm mb-3 leading-relaxed">
             {project.description}
           </p>
-          <div className="flex flex-wrap gap-2 mb-6 mt-auto">
+
+          {project.architecture && (
+            <div className="mb-3 text-[11px] font-mono text-sky-400/90 bg-primary/5 p-2 rounded-lg border border-primary/20 flex items-center gap-2 overflow-x-auto">
+              <span className="font-semibold text-primary shrink-0">Arch:</span>
+              <span className="whitespace-nowrap">{project.architecture}</span>
+            </div>
+          )}
+
+          {project.features && (
+            <ul className="mb-4 space-y-1 text-xs text-gray-400">
+              {project.features.slice(0, 3).map((feat, i) => (
+                <li key={i} className="flex items-start gap-1.5">
+                  <span className="text-primary leading-none mt-1">▸</span>
+                  <span>{feat}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          <div className="flex flex-wrap gap-1.5 mb-5 mt-auto">
             {project.techStack.map((tech, i) => (
-              <span key={i} className="text-xs font-mono text-primary bg-primary/10 px-2 py-1 rounded border border-primary/20">
+              <span key={i} className="text-[11px] font-mono text-primary bg-primary/10 px-2 py-0.5 rounded border border-primary/20">
                 {tech}
               </span>
             ))}
@@ -80,10 +117,10 @@ const ProjectCard = ({ project, index }) => {
               <a 
                 href="#"
                 onClick={(e) => e.preventDefault()}
-                className="text-gray-300 hover:text-primary transition-colors flex items-center gap-2 text-sm font-medium opacity-50 cursor-not-allowed"
-                title="Demo not available yet"
+                className="text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-2 text-xs font-mono opacity-60 cursor-not-allowed"
+                title="Demo in development"
               >
-                <FiExternalLink className="text-lg" /> Live
+                <FiExternalLink className="text-base" /> Demo Soon
               </a>
             )}
           </div>

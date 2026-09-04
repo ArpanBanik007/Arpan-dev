@@ -44,7 +44,7 @@ const Hero = () => {
           <br className="md:hidden" />
           <span className="gradient-text h-20 inline-block md:min-h-0">
             <Typewriter
-              words={['MERN Stack Developer']}
+              words={['Software Engineer', 'Full-Stack Developer', 'MERN Developer']}
               loop={0}
               cursor
               cursorStyle='_'
@@ -56,13 +56,22 @@ const Hero = () => {
         </motion.h1>
 
         <motion.h2
-          className="text-xl md:text-2xl text-gray-400 mb-10 font-medium"
+          className="text-xl md:text-2xl text-gray-300 mb-4 font-medium"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          Freelancer | Digital Marketer | Content Creator
+          Full-Stack Developer | MERN | AI Enthusiast
         </motion.h2>
+
+        <motion.p
+          className="max-w-2xl mx-auto text-gray-400 text-base md:text-lg mb-10 leading-relaxed font-normal"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+        >
+          I build modern, scalable web applications and AI-powered solutions that solve real-world problems.
+        </motion.p>
 
         <motion.div 
           className="flex flex-wrap justify-center gap-4"
@@ -78,13 +87,6 @@ const Hero = () => {
           >
             View Projects
           </Link>
-          <Link
-            to="contact"
-            smooth={true}
-            className="px-8 py-3 rounded-full glass border border-primary/30 text-white font-medium hover:bg-primary/10 transition-all cursor-pointer"
-          >
-            Contact Me
-          </Link>
           <a
             href="/Arpan Banik.Resume (2).pdf"
             download="Arpan_Banik_Resume.pdf"
@@ -92,6 +94,13 @@ const Hero = () => {
           >
             Download Resume
           </a>
+          <Link
+            to="contact"
+            smooth={true}
+            className="px-8 py-3 rounded-full glass border border-primary/30 text-white font-medium hover:bg-primary/10 transition-all cursor-pointer"
+          >
+            Contact Me
+          </Link>
         </motion.div>
       </div>
     </section>
