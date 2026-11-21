@@ -8,7 +8,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 40);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -20,7 +20,7 @@ const Navbar = () => {
     { name: 'Skills', to: 'techstack' },
     { name: 'Engineering', to: 'engineering' },
     { name: 'Projects', to: 'projects' },
-    { name: 'Experience', to: 'experience' },
+    { name: 'Timeline', to: 'experience' },
     { name: 'Contact', to: 'contact' },
   ];
 
@@ -46,16 +46,16 @@ const Navbar = () => {
               smooth={true}
               duration={500}
               spy={true}
-              activeClass="text-primary"
+              activeClass="text-primary font-semibold"
               className="text-sm font-medium text-gray-300 hover:text-primary transition-colors cursor-pointer"
             >
               {link.name}
             </Link>
           ))}
           <a
-            href="/Arpan Banik.Resume (2).pdf"
+            href="/Arpan_Banik_Resume.pdf"
             download="Arpan_Banik_Resume.pdf"
-            className="px-5 py-2 rounded-full bg-primary/10 text-primary border border-primary/50 hover:bg-primary hover:text-white transition-all duration-300 shadow-[0_0_10px_rgba(14,165,233,0.2)] hover:shadow-[0_0_20px_rgba(14,165,233,0.6)]"
+            className="px-5 py-2 rounded-full bg-primary/10 text-primary border border-primary/50 hover:bg-primary hover:text-white transition-all duration-300 shadow-[0_0_10px_rgba(14,165,233,0.2)] hover:shadow-[0_0_20px_rgba(14,165,233,0.5)] text-sm font-medium"
           >
             Resume
           </a>
@@ -68,7 +68,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Nav */}
-      <div className={`md:hidden absolute top-full left-0 w-full glass transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-screen py-6 border-b border-cardBorder' : 'max-h-0'}`}>
+      <div className={`md:hidden absolute top-full left-0 w-full glass transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-screen py-6 border-b border-white/10' : 'max-h-0'}`}>
         <nav className="flex flex-col items-center gap-6">
           {navLinks.map((link) => (
             <Link
@@ -83,9 +83,9 @@ const Navbar = () => {
             </Link>
           ))}
           <a
-            href="/Arpan Banik.Resume (2).pdf"
+            href="/Arpan_Banik_Resume.pdf"
             download="Arpan_Banik_Resume.pdf"
-            className="px-6 py-2 mt-2 rounded-full bg-primary text-white shadow-[0_0_15px_rgba(14,165,233,0.5)]"
+            className="px-6 py-2 mt-2 rounded-full bg-primary text-white shadow-[0_0_15px_rgba(14,165,233,0.5)] text-sm font-semibold"
           >
             Download Resume
           </a>

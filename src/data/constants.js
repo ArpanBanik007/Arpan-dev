@@ -1,129 +1,125 @@
 export const developerInfo = {
   name: "Arpan Banik",
-  role: "Software Engineer",
-  primaryTitle: "Software Engineer",
-  secondaryTitles: ["Software Engineer", "Full-Stack Developer", "MERN Stack Developer", "AI Solutions Builder"],
-  subtitle: "Full-Stack Developer | MERN | AI Enthusiast",
-  tagline: "I build modern, scalable web applications and AI-powered solutions that solve real-world problems.",
+  role: "Software Developer | Full-Stack & Generative AI",
+  primaryTitle: "Software Developer",
+  secondaryTitles: [
+    "Full-Stack Developer",
+    "Generative AI Developer",
+    "RAG & Agentic Systems",
+    "MERN Stack Engineer"
+  ],
+  subtitle: "Full-Stack Development • Generative AI & RAG • LangGraph Agents",
+  tagline: "Building production-grade full-stack web applications, stateful LangGraph agents, and multilingual RAG systems.",
   location: "Kolkata, West Bengal, India",
   phone: "+91-8902321545",
   email: "arpanbanik976@gmail.com",
   github: "https://github.com/ArpanBanik007",
   linkedin: "https://www.linkedin.com/in/arpan-banik-b280b7247/",
   twitter: "https://x.com/arpanbanik2004",
-  bio: "I am an Electronics & Communication Engineering undergraduate (2027 batch) with a strong passion for software engineering. I have independently developed end-to-end full-stack capabilities—architecting modular frontends, designing robust REST APIs, modeling databases, and implementing real-time features. Currently advancing my skills in TypeScript and Next.js while actively exploring AI-powered software solutions.",
+  bio: "Software Developer with hands-on experience in Full-Stack Development and Generative AI. I have built and deployed production web platforms (Near It... and Pluto) covering 150+ REST APIs, real-time Socket.IO sync, Razorpay payments, and geospatial search, alongside cutting-edge Generative AI applications including a multilingual YouTube RAG assistant with Qdrant, a LangGraph ordering agent, and Groq-powered LLM pipelines.",
 
   aboutJourney: {
-    origin: "Pursuing my B.Tech in Electronics & Communication Engineering (graduating batch of 2027), my curiosity for software systems led me to dive deeply into self-taught software engineering.",
-    growth: "I developed a solid foundation in the MERN stack—focusing on clean REST API design, MongoDB schema modeling, JWT authentication, and real-time WebSocket communication for real-world applications.",
-    current: "Today, I build scalable web systems, continuously improve in TypeScript and Next.js, and explore AI/GenAI integrations (LLM APIs, prompt workflows, and practical AI solutions) to build impactful software."
+    origin: "Pursuing my B.Tech in Electronics & Communication Engineering (graduating batch of 2027), my curiosity for systems architecture led me to master modern full-stack web engineering and Generative AI.",
+    growth: "I developed deep full-stack mastery across the MERN stack—architecting and deploying 2 live production platforms (Near It... and Pluto) with 150+ REST APIs, real-time Socket.IO event rooms, server-side Razorpay webhook payments, and MongoDB geospatial query optimization.",
+    current: "Today, I actively engineer Generative AI systems: building multilingual YouTube RAG applications using Faster-Whisper and Qdrant vector databases, stateful ordering agents using LangGraph, and automated LLM evaluation pipelines using Groq, Pydantic, and SentenceTransformers."
   },
 
   skillsCategorized: [
     {
-      category: "Frontend",
-      skills: ["JavaScript (ES6+)", "TypeScript", "React", "Next.js", "Redux Toolkit", "Tailwind CSS", "HTML5 & CSS3"]
+      category: "Generative AI & LLMs",
+      skills: ["LangGraph", "LangChain", "Groq API", "RAG Architecture", "Qdrant Vector DB", "SentenceTransformers (all-MiniLM-L6-v2)", "Faster-Whisper", "Prompt Engineering", "Pydantic"]
     },
     {
-      category: "Backend",
-      skills: ["Node.js", "Express.js", "REST API Design", "JWT Authentication", "Socket.io", "API Gateway"]
+      category: "Full-Stack & Backend",
+      skills: ["Node.js", "Express.js", "FastAPI (Python)", "REST APIs", "Socket.IO (WebSockets)", "JWT Auth & HTTP-Only Cookies", "RBAC", "Razorpay Payments & Webhooks", "Nodemailer"]
     },
     {
-      category: "Databases",
-      skills: ["MongoDB (Mongoose)", "MySQL", "PostgreSQL"]
+      category: "Frontend Engineering",
+      skills: ["ReactJS", "Vite", "Next.js", "Redux Toolkit", "Tailwind CSS", "React Router", "React Hook Form", "Leaflet Maps", "HTML5 & CSS3"]
     },
     {
-      category: "Tools & Engineering",
-      skills: ["Git", "GitHub", "GitHub Actions (CI/CD)", "Cloudinary", "Razorpay Gateway", "Postman", "Vercel / Cloud"]
+      category: "Databases & Storage",
+      skills: ["MongoDB (Mongoose)", "Qdrant (Vector DB)", "MySQL", "Geospatial Queries ($geoNear)", "Cloudinary Media Storage"]
     },
     {
-      category: "AI & Emerging Focus",
-      skills: ["LLM APIs (Gemini/OpenAI)", "Prompt Engineering", "RAG Concepts", "AI Application Development"]
+      category: "Languages & DevOps",
+      skills: ["Python", "JavaScript (ES6+)", "TypeScript", "C", "Git & GitHub", "Vercel", "uv", "CI/CD Workflows", "Postman"]
     }
   ],
 
   engineeringPillars: [
     {
-      title: "Clean & Maintainable Code",
-      description: "Writing modular, readable code with clear separation of concerns across presentation, business logic, and data layers.",
+      title: "Layered & Modular Architecture",
+      description: "Writing maintainable code using clean controller–service–model separation, modular component trees, and strict type/schema contracts.",
       icon: "code"
     },
     {
-      title: "API Design & Security",
-      description: "Designing structured RESTful APIs with secure JWT authentication, input validation, and standardized error handling.",
+      title: "Generative AI & Agentic Workflows",
+      description: "Designing stateful multi-step agent graphs with LangGraph, deterministic tool calling, and context-aware RAG pipelines.",
+      icon: "cpu"
+    },
+    {
+      title: "API Design, Security & Payments",
+      description: "Structuring RESTful APIs with JWT auth via HTTP-only cookies, RBAC enforcement, and Razorpay server-side signature verification.",
       icon: "server"
     },
     {
-      title: "Database Modeling & Structure",
-      description: "Structuring scalable schemas in MongoDB & relational databases, indexing queries, and preserving data integrity.",
+      title: "Vector Search & Geospatial Performance",
+      description: "Implementing Qdrant vector similarity search, MongoDB compound & $geoNear indexing, and real-time Socket.IO event broadcasting.",
       icon: "database"
-    },
-    {
-      title: "Performance & Scalability",
-      description: "Building responsive interfaces, optimized asset delivery, real-time sync, and dependable deployments on modern clouds.",
-      icon: "cpu"
     }
   ],
 
   timeline: [
     {
       id: 1,
-      title: "Independent Software Developer",
-      organization: "Personal & Open-Source Projects",
-      period: "2023 - Present",
+      title: "Full-Stack & Generative AI Developer",
+      organization: "Production Platforms & AI Projects",
+      period: "2024 – Present",
       type: "experience",
-      badge: "Building",
-      description: "Architecting full-stack web applications, integrating AI capabilities, and building robust RESTful microservices. Actively honing Data Structures & Algorithms and modern engineering best practices."
+      badge: "Active Builder",
+      description: "Architecting and deploying production MERN web applications (Near It..., Pluto) with 150+ REST APIs, and building multilingual RAG & LangGraph AI agents using Python, FastAPI, and Qdrant."
     },
     {
       id: 2,
       title: "B.Tech in Electronics & Communication Engineering",
       organization: "Swami Vivekananda Institute of Science and Technology",
-      period: "2023 - 2027 (Expected)",
+      period: "Aug 2024 – Present",
       type: "education",
       badge: "2027 Batch",
       score: "CGPA: 7.05",
-      description: "Engineering foundation covering discrete mathematics, digital logic, and analytical problem-solving alongside self-taught software development."
+      description: "Academic engineering foundation in discrete mathematics, digital signal systems, and computing fundamentals alongside self-driven software engineering."
     },
     {
       id: 3,
-      title: "Freelance Developer & Digital Solutions",
-      organization: "Independent Client Engagements",
-      period: "2022 - 2024",
-      type: "secondary",
-      badge: "Secondary Experience",
-      description: "Delivered responsive web interfaces, site performance optimizations, and digital solutions for independent clients while learning real-world client collaboration."
-    },
-    {
-      id: 4,
       title: "Diploma in Electrical Engineering",
-      organization: "Basirhat Govt Polytechnic",
-      period: "2020 - 2023",
+      organization: "Basirhat Govt. Polytechnic",
+      period: "Oct 2021 – Jul 2024",
       type: "education",
       badge: "Engineering",
       score: "75%",
-      description: "Developed core analytical discipline, circuit fundamentals, and mathematical problem-solving."
+      description: "Built strong analytical discipline, circuit logic, and mathematical problem-solving."
     }
   ],
 
   education: [
     {
       id: 1,
-      degree: "B.Tech in ECE (2027 Batch)",
-      institution: "Swami Vivekananda Institute of Science and Technology",
+      degree: "B.Tech in Electronics & Communication Engineering",
+      institution: "Swami Vivekananda Institute of Science and Technology, Kolkata",
       score: "CGPA: 7.05"
     },
     {
       id: 2,
       degree: "Diploma in Electrical Engineering",
-      institution: "Basirhat Govt Polytechnic",
+      institution: "Basirhat Govt. Polytechnic, Basirhat",
       score: "75%"
     }
   ],
 
   opportunity: {
     heading: "Looking for the Next Opportunity",
-    subheading: "Open for Software Engineering Internships, Full-Stack Developer roles, and AI-powered application development.",
-    description: "I am ready to bring strong full-stack foundations, clean coding standards, and an eagerness to learn and contribute to a high-impact engineering team."
+    subheading: "Open for Software Developer, Full-Stack Developer, and Generative AI / LLM Engineer roles & internships.",
+    description: "Ready to contribute hands-on experience in full-stack web platforms, LangGraph agents, and RAG pipelines to high-impact engineering teams."
   }
 };
