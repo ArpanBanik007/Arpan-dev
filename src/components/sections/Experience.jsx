@@ -69,11 +69,22 @@ const Experience = () => {
                     <h3 className="text-lg md:text-xl font-poppins font-bold text-white mb-1">{item.title}</h3>
                     <h4 className="text-primary font-medium text-sm mb-3">{item.organization}</h4>
                     <p className="text-gray-300 text-xs md:text-sm leading-relaxed mb-3">{item.description}</p>
+
+                    {item.coursework && (
+                      <div className={`mb-3 ${index % 2 === 0 ? 'text-left' : 'text-left md:text-right'}`}>
+                        <div className="inline-block text-left text-xs font-mono text-gray-300 bg-white/[0.03] p-2.5 rounded-lg border border-white/10">
+                          <span className="text-primary font-semibold">Coursework: </span>
+                          <span className="text-gray-400">{item.coursework}</span>
+                        </div>
+                      </div>
+                    )}
                     
                     {item.score && (
-                      <p className="text-gray-400 font-mono text-xs bg-white/[0.02] inline-block px-3 py-1 rounded-md border border-white/10">
-                        Score: {item.score}
-                      </p>
+                      <div className={`flex ${index % 2 === 0 ? 'justify-start' : 'justify-start md:justify-end'}`}>
+                        <span className="text-primary font-mono text-xs bg-primary/10 inline-block px-3 py-1 rounded-md border border-primary/20">
+                          {item.score}
+                        </span>
+                      </div>
                     )}
                   </motion.div>
                 </div>

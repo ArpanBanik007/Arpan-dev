@@ -83,22 +83,33 @@ export const developerInfo = {
     {
       id: 2,
       title: "B.Tech in Electronics & Communication Engineering",
-      organization: "Swami Vivekananda Institute of Science and Technology",
+      organization: "Swami Vivekananda Institute of Science and Technology, Kolkata",
       period: "Aug 2024 – Present",
       type: "education",
       badge: "2027 Batch",
       score: "CGPA: 7.05",
-      description: "Academic engineering foundation in discrete mathematics, digital signal systems, and computing fundamentals alongside self-driven software engineering."
+      coursework: "Data Structures & Algorithms, Web Development, MERN Stack Development",
+      description: "Undergraduate engineering degree with a focus on computing systems, discrete mathematics, and web technologies alongside continuous self-driven full-stack & AI engineering."
     },
     {
       id: 3,
       title: "Diploma in Electrical Engineering",
-      organization: "Basirhat Govt. Polytechnic",
+      organization: "Basirhat Govt. Polytechnic, Basirhat",
       period: "Oct 2021 – Jul 2024",
       type: "education",
-      badge: "Engineering",
-      score: "75%",
-      description: "Built strong analytical discipline, circuit logic, and mathematical problem-solving."
+      badge: "Diploma",
+      score: "Percentage: 75%",
+      description: "Completed diploma with 75% aggregate; developed strong foundational problem-solving, circuit analysis, and logical systems engineering."
+    },
+    {
+      id: 4,
+      title: "Madhyamik (Class X)",
+      organization: "Batanagar Sri Ramkrishna Ashram Vivekananda Vidyamandir (HS)",
+      period: "2020",
+      type: "education",
+      badge: "Secondary",
+      score: "Percentage: 66%",
+      description: "Completed secondary education under WBBSE with core foundations in physical science, life science, and mathematics."
     }
   ],
 
@@ -107,13 +118,23 @@ export const developerInfo = {
       id: 1,
       degree: "B.Tech in Electronics & Communication Engineering",
       institution: "Swami Vivekananda Institute of Science and Technology, Kolkata",
-      score: "CGPA: 7.05"
+      period: "Aug 2024 – Present",
+      score: "CGPA: 7.05",
+      coursework: "Data Structures & Algorithms, Web Development, MERN Stack Development"
     },
     {
       id: 2,
       degree: "Diploma in Electrical Engineering",
       institution: "Basirhat Govt. Polytechnic, Basirhat",
-      score: "75%"
+      period: "Oct 2021 – Jul 2024",
+      score: "Percentage: 75%"
+    },
+    {
+      id: 3,
+      degree: "Madhyamik (Class X)",
+      institution: "Batanagar Sri Ramkrishna Ashram Vivekananda Vidyamandir (HS)",
+      period: "2020",
+      score: "Percentage: 66%"
     }
   ],
 

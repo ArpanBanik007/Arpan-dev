@@ -138,13 +138,18 @@ npm run dev
 
 ## 🎓 Education
 
-**B.Tech in Electronics & Communication Engineering**
-Swami Vivekananda Institute of Science and Technology
-CGPA: 7.05
+* **B.Tech in Electronics & Communication Engineering** (Aug 2024 – Present)  
+  *Swami Vivekananda Institute of Science and Technology, Kolkata*  
+  **CGPA**: 7.05  
+  *Relevant Coursework*: Data Structures & Algorithms, Web Development, MERN Stack Development
 
-**Diploma in Electrical Engineering**
-Basirhat Govt Polytechnic
-Percentage: 75%
+* **Diploma in Electrical Engineering** (Oct 2021 – Jul 2024)  
+  *Basirhat Govt. Polytechnic, Basirhat*  
+  **Percentage**: 75%
+
+* **Madhyamik (Class X)** (2020)  
+  *Batanagar Sri Ramkrishna Ashram Vivekananda Vidyamandir (HS)*  
+  **Percentage**: 66%
 
 ---
 
