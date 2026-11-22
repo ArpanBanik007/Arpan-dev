@@ -1,24 +1,30 @@
 """
 Embedding Service
-Wraps sentence-transformers/all-MiniLM-L6-v2 to produce normalized dense vectors.
+Wraps sentence-transformers/all-MiniLM-L6-v2 via FastEmbed (ONNX Runtime, CPU-only)
+to produce normalized dense vectors without PyTorch.
 Loads model once as a singleton to maximize performance and minimize memory usage.
 Phase 4 of Arpan AI Portfolio RAG.
 """
 
 from typing import List, Optional
 import numpy as np
-from sentence_transformers import SentenceTransformer
+from fastembed import TextEmbedding
 from app.core.config import settings
+
+# FastEmbed model name mapping: HF canonical → fastembed registry name
+_FASTEMBED_MODEL_MAP = {
+    "sentence-transformers/all-MiniLM-L6-v2": "sentence-transformers/all-MiniLM-L6-v2",
+}
 
 
 class EmbeddingService:
     """
-    Singleton service managing sentence-transformers/all-MiniLM-L6-v2.
+    Singleton service managing sentence-transformers/all-MiniLM-L6-v2 via ONNX Runtime.
     Produces L2-normalized 384-dimensional embeddings.
     """
 
     _instance: Optional["EmbeddingService"] = None
-    _model: Optional[SentenceTransformer] = None
+    _model: Optional[TextEmbedding] = None
 
     def __new__(cls) -> "EmbeddingService":
         if cls._instance is None:
@@ -31,11 +37,13 @@ class EmbeddingService:
             self._load_model()
 
     def _load_model(self) -> None:
-        """Load the SentenceTransformer model once."""
+        """Load the ONNX embedding model once via FastEmbed."""
         try:
-            self._model = SentenceTransformer(self.model_name)
-            # Verify embedding dimension
-            dim = self._model.get_embedding_dimension()
+            fastembed_name = _FASTEMBED_MODEL_MAP.get(self.model_name, self.model_name)
+            self._model = TextEmbedding(model_name=fastembed_name)
+            # Verify embedding dimension with a probe
+            probe = list(self._model.embed(["dimension check"]))[0]
+            dim = len(probe)
             if dim != settings.EMBEDDING_DIMENSION:
                 raise ValueError(
                     f"Model embedding dimension mismatch: expected {settings.EMBEDDING_DIMENSION}, got {dim}"
@@ -44,8 +52,8 @@ class EmbeddingService:
             raise RuntimeError(f"Failed to load embedding model '{self.model_name}': {e}") from e
 
     @property
-    def model(self) -> SentenceTransformer:
-        """Access the underlying SentenceTransformer instance."""
+    def model(self) -> TextEmbedding:
+        """Access the underlying FastEmbed TextEmbedding instance."""
         if self._model is None:
             self._load_model()
         return self._model
@@ -59,19 +67,15 @@ class EmbeddingService:
             raise ValueError("Query string cannot be empty")
 
         try:
-            vector = self.model.encode(
-                query_text,
-                normalize_embeddings=True,
-                show_progress_bar=False,
-                convert_to_numpy=True,
-            )
-            return vector.tolist()
+            vectors = list(self.model.embed([query_text]))
+            return vectors[0].tolist()
         except Exception as e:
             raise RuntimeError(f"Failed to generate query embedding: {e}") from e
 
     def embed_documents(self, texts: List[str]) -> List[List[float]]:
         """
         Embed a list of document strings into normalized vectors.
+        Uses small batches to control memory usage.
         """
         if not texts:
             return []
@@ -79,20 +83,14 @@ class EmbeddingService:
         cleaned_texts = [t.strip() if t.strip() else " " for t in texts]
 
         try:
-            vectors = self.model.encode(
-                cleaned_texts,
-                normalize_embeddings=True,
-                show_progress_bar=False,
-                convert_to_numpy=True,
-                batch_size=32,
-            )
-            return vectors.tolist()
+            vectors = list(self.model.embed(cleaned_texts, batch_size=16))
+            return [v.tolist() for v in vectors]
         except Exception as e:
             raise RuntimeError(f"Failed to generate document embeddings: {e}") from e
 
     def get_dimension(self) -> int:
         """Return the vector dimensionality."""
-        return self.model.get_embedding_dimension()
+        return settings.EMBEDDING_DIMENSION
 
 
 # Global reusable instance

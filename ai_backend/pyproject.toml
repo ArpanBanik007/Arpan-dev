@@ -16,7 +16,7 @@ dependencies = [
     "python-docx>=1.2.0",
     "python-dotenv>=1.2.4",
     "python-multipart>=0.0.34",
-    "sentence-transformers>=6.3.0",
+    "fastembed>=0.6.1",
     "uvicorn[standard]>=0.54.0",
 ]
 

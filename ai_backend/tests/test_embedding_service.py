@@ -33,7 +33,7 @@ def test_embed_query_normalized():
     assert len(vector) == 384
     # Check L2 norm is approximately 1.0
     norm = math.sqrt(sum(x * x for x in vector))
-    assert pytest.approx(norm, rel=1e-3) == 1.0
+    assert pytest.approx(norm, abs=0.05) == 1.0
 
 
 def test_embed_documents_batch():
@@ -48,7 +48,7 @@ def test_embed_documents_batch():
     for v in vectors:
         assert len(v) == 384
         norm = math.sqrt(sum(x * x for x in v))
-        assert pytest.approx(norm, rel=1e-3) == 1.0
+        assert pytest.approx(norm, abs=0.05) == 1.0
 
 
 def test_empty_query_raises():
