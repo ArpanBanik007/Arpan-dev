@@ -1,11 +1,11 @@
 /**
  * Chatbot & JD Analyzer API Client Service.
  * Connects React frontend to the FastAPI backend.
- * Uses environment variable VITE_AI_API_URL (defaults to http://localhost:8001).
+ * Uses environment variable VITE_AI_API_URL (defaults to https://arpan-dev-1.onrender.com).
  * Never exposes any API keys or backend secrets.
  */
 
-const BASE_URL = import.meta.env.VITE_AI_API_URL || 'http://localhost:8001';
+const BASE_URL = import.meta.env.VITE_AI_API_URL || 'https://arpan-dev-1.onrender.com';
 
 /**
  * Handle HTTP response and return JSON or throw descriptive error.
