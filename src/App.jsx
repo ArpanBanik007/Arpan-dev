@@ -5,6 +5,7 @@ import LoadingScreen from './components/layout/LoadingScreen';
 import CustomCursor from './components/layout/CustomCursor';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import AIChatbot from './components/AIChatbot/AIChatbot';
 
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
@@ -38,6 +39,7 @@ function App() {
             <Contact />
           </main>
           <Footer />
+          <AIChatbot />
         </div>
       )}
     </>

@@ -22,3 +22,18 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment & Local Secrets
+.env
+.env.*
+!.env.example
+ai_backend/.env
+ai_backend/.env.*
+!ai_backend/.env.example
+
+# Python & AI backend
+__pycache__/
+*.py[cod]
+ai_backend/.venv/
+ai_backend/chroma_db/
+.pytest_cache/

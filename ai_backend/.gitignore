@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+.venv/
+env/
+venv/
+ENV/
+
+# ChromaDB Persistent Storage
+chroma_db/
+*.sqlite3
+
+# Environment variables
+.env
+.env.local
+
+# Testing and Caches
+.pytest_cache/
+.coverage
+htmlcov/

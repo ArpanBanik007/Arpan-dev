@@ -1,0 +1,363 @@
+{
+  "personal_info": {
+    "name": "Arpan Banik",
+    "headline": "Full-Stack Developer | Generative AI & RAG Engineer",
+    "current_role": "B.Tech ECE Student and Independent Software Developer",
+    "career_objective": [
+      "Full-Stack Developer",
+      "MERN Stack Developer",
+      "Python Backend Developer",
+      "Generative AI / RAG Engineer",
+      "LLM Application Developer"
+    ],
+    "location": {
+      "city": "Kolkata",
+      "state": "West Bengal",
+      "country": "India",
+      "area": "Batanagar"
+    },
+    "contact": {
+      "phone": "+91-8902321545",
+      "email": "arpanbanik976@gmail.com",
+      "linkedin": "https://linkedin.com/in/arpan-banik-b280b7247",
+      "github": "https://github.com/ArpanBanik007",
+      "portfolio": "https://arpan-two.vercel.app"
+    },
+    "availability": "Open to Software Developer, Full-Stack Developer, Generative AI / LLM Engineer roles and internships"
+  },
+  "professional_summary": "Full-Stack and Generative AI developer pursuing a B.Tech in Electronics & Communication Engineering (2027 batch). Builds and deploys MERN applications using React, Redux Toolkit, Node.js, Express.js and MongoDB, with experience in REST API design, layered controller-service-model architecture, JWT authentication, role-based access control, Razorpay payments and webhooks, Socket.IO real-time communication, media handling and geospatial search. Also develops Python-based Generative AI systems, including RAG applications with vector databases, multilingual video knowledge retrieval, and stateful LangGraph agents.",
+  "education": [
+    {
+      "degree": "B.Tech in Electronics & Communication Engineering",
+      "institution": "Swami Vivekananda Institute of Science and Technology",
+      "location": "Kolkata, West Bengal, India",
+      "start_date": "August 2024",
+      "expected_graduation": "2027",
+      "status": "Pursuing",
+      "cgpa": 7.05,
+      "relevant_coursework": [
+        "Data Structures & Algorithms",
+        "Web Development",
+        "MERN Stack Development"
+      ]
+    },
+    {
+      "degree": "Diploma in Electrical Engineering",
+      "institution": "Basirhat Govt. Polytechnic",
+      "location": "Basirhat, West Bengal, India",
+      "start_date": "October 2021",
+      "end_date": "July 2024",
+      "percentage": 75
+    },
+    {
+      "degree": "Madhyamik (Class X)",
+      "institution": "Batanagar Sri Ramkrishna Ashram Vivekananda Vidyamandir (HS)",
+      "year": 2020,
+      "percentage": 66
+    }
+  ],
+  "technical_skills": {
+    "programming_languages": [
+      "JavaScript (ES6+)",
+      "Python",
+      "HTML5",
+      "CSS3",
+      "TypeScript",
+      "C"
+    ],
+    "frontend": [
+      "React.js",
+      "Vite",
+      "Next.js",
+      "Redux Toolkit",
+      "React Router",
+      "React Hook Form",
+      "Tailwind CSS",
+      "Leaflet"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "FastAPI",
+      "REST API Development",
+      "Socket.IO",
+      "WebSockets",
+      "Nodemailer",
+      "Layered Controller-Service-Model Architecture"
+    ],
+    "databases_and_storage": [
+      "MongoDB",
+      "Mongoose",
+      "Qdrant Vector Database",
+      "ChromaDB",
+      "MySQL",
+      "Cloudinary"
+    ],
+    "authentication_security_and_payments": [
+      "JWT Authentication",
+      "HTTP-only Cookies",
+      "Refresh Tokens",
+      "Role-Based Access Control (RBAC)",
+      "Email OTP Verification",
+      "Razorpay Integration",
+      "Payment Signature Verification",
+      "Razorpay Webhooks",
+      "Duplicate-Protected Refund Flows"
+    ],
+    "generative_ai_and_llm": [
+      "Retrieval-Augmented Generation (RAG)",
+      "LangGraph",
+      "LangChain",
+      "Groq API",
+      "LLM API Integration",
+      "Prompt Engineering",
+      "SentenceTransformers",
+      "HuggingFace Embeddings",
+      "all-MiniLM-L6-v2",
+      "Pydantic",
+      "Faster-Whisper",
+      "Semantic Search",
+      "Vector Similarity Search",
+      "Structured LLM Outputs",
+      "Token Usage Tracking"
+    ],
+    "developer_tools_and_deployment": [
+      "Git",
+      "GitHub",
+      "Postman",
+      "uv",
+      "Vercel",
+      "CI/CD Workflows",
+      "python-dotenv"
+    ]
+  },
+  "engineering_strengths": [
+    {
+      "area": "Full-Stack Application Engineering",
+      "details": "Developing end-to-end web applications with React, Redux Toolkit, Node.js, Express.js and MongoDB."
+    },
+    {
+      "area": "Backend Architecture and API Design",
+      "details": "Building modular REST APIs with controller-service-model separation, reusable services and structured data models."
+    },
+    {
+      "area": "Authentication and Authorization",
+      "details": "Implementing JWT-based authentication with HTTP-only cookies, refresh tokens, email OTP and backend-enforced RBAC."
+    },
+    {
+      "area": "Payment Systems",
+      "details": "Integrating Razorpay with server-side amount calculation, signature verification, webhook processing and protected refund workflows."
+    },
+    {
+      "area": "Real-Time Applications",
+      "details": "Using Socket.IO rooms and events for live notifications, booking updates, likes and comments."
+    },
+    {
+      "area": "Geospatial Search",
+      "details": "Using MongoDB geospatial queries, including $geoNear, with Leaflet and OpenStreetMap maps."
+    },
+    {
+      "area": "RAG and Vector Retrieval",
+      "details": "Creating document and media ingestion pipelines, generating dense embeddings, indexing them in vector databases and retrieving semantically relevant context."
+    },
+    {
+      "area": "Agentic Workflows",
+      "details": "Designing stateful multi-step LangGraph workflows with structured state, tool calling, inventory validation and controlled transitions."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Near It...",
+      "category": "Full-Stack Service Marketplace",
+      "tagline": "Smart Service Booking & Management Platform",
+      "status": "Live platform",
+      "dates": "September 2026 – Present",
+      "links": {
+        "github": "https://github.com/ArpanBanik007/Smart-Service-Booking-RBS",
+        "live": "https://nearit.vercel.app"
+      },
+      "tech_stack": [
+        "React",
+        "Redux Toolkit",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "JWT",
+        "Razorpay",
+        "Socket.IO",
+        "Leaflet"
+      ],
+      "overview": "A three-role service marketplace connecting customers with local service providers, with booking coordination, provider verification, geospatial discovery and online payments.",
+      "architecture": "React + Redux Toolkit frontend → Express REST API (/api/v1) and Socket.IO → MongoDB and Mongoose → Razorpay and Leaflet",
+      "highlights": [
+        "Built a three-role marketplace for customers, providers and administrators.",
+        "Architected 90+ REST APIs and 15 MongoDB models using controller-service-model separation.",
+        "Implemented a five-stage booking lifecycle: PENDING, ACCEPTED, ON_THE_WAY, STARTED and COMPLETED.",
+        "Implemented JWT authentication using HTTP-only cookies and refresh tokens.",
+        "Added email OTP verification with a three-minute expiry and backend-enforced RBAC.",
+        "Integrated Razorpay with server-side amount calculation, payment signature verification and four webhook events.",
+        "Implemented an admin refund flow with duplicate-request protection.",
+        "Added nearby-provider discovery using MongoDB $geoNear within a 1–200 km radius.",
+        "Integrated Leaflet and OpenStreetMap maps.",
+        "Used Socket.IO rooms for real-time notifications, provider location updates and booking status alerts."
+      ]
+    },
+    {
+      "name": "YouTube Video AI Knowledge Assistant",
+      "category": "Generative AI / Multilingual Multimodal RAG",
+      "tagline": "Ask questions about YouTube videos and playlists with timestamp-based answers",
+      "status": "AI repository",
+      "links": {
+        "github": "https://github.com/ArpanBanik007/YouTube-Video-AI-Knowledge-Assistant"
+      },
+      "tech_stack": [
+        "Python",
+        "FastAPI",
+        "React",
+        "Vite",
+        "Qdrant",
+        "Faster-Whisper",
+        "yt-dlp",
+        "Groq / LLM APIs",
+        "Tailwind CSS"
+      ],
+      "overview": "A multilingual YouTube RAG application that processes videos and playlists, transcribes audio, indexes transcript embeddings in Qdrant and answers questions with clickable timestamp citations.",
+      "architecture": "React + Vite frontend → FastAPI backend → Faster-Whisper and yt-dlp → Qdrant vector database → Groq / LLM APIs",
+      "highlights": [
+        "Supports questions in English, Hindi and Hinglish.",
+        "Uses yt-dlp for video and audio extraction.",
+        "Uses Faster-Whisper for audio transcription.",
+        "Generates embeddings and performs semantic similarity search using Qdrant.",
+        "Provides clickable timestamp citations that take users to relevant video moments.",
+        "Includes a split-screen chat interface with a synchronized transcript excerpt viewer."
+      ]
+    },
+    {
+      "name": "Restaurant Assistant Agent",
+      "category": "Generative AI / LangGraph Agent",
+      "tagline": "Stateful conversational restaurant ordering workflow",
+      "status": "AI repository",
+      "links": {
+        "github": "https://github.com/ArpanBanik007/Restaurant-Assistant-Agent"
+      },
+      "tech_stack": [
+        "Python",
+        "LangGraph",
+        "LangChain",
+        "LLMs",
+        "Pydantic",
+        "Prompt Engineering"
+      ],
+      "overview": "A stateful conversational ordering agent that extracts food items and quantities, validates inventory, handles unavailable items and simulates the cooking and serving lifecycle.",
+      "architecture": "User input → LangGraph StateGraph → Extraction node → Inventory-check tool → Order state machine → Kitchen simulation",
+      "highlights": [
+        "Models a multi-step order workflow using LangGraph StateGraph.",
+        "Extracts food items, quantities and customer preferences from natural-language requests.",
+        "Checks restaurant inventory and handles partially available or out-of-stock items.",
+        "Simulates preparation, cooking and serving status transitions.",
+        "Uses structured output parsing and deterministic state management."
+      ]
+    },
+    {
+      "name": "LLM Resume Screening & Embeddings",
+      "category": "Python / LLM / Embeddings",
+      "tagline": "Structured resume parsing, candidate scoring and semantic embedding generation",
+      "status": "AI repository",
+      "dates": "October 2026 – Present",
+      "links": {
+        "github": "https://github.com/ArpanBanik007/Rag-Project"
+      },
+      "tech_stack": [
+        "Python",
+        "Groq API",
+        "Pydantic",
+        "SentenceTransformers",
+        "all-MiniLM-L6-v2",
+        "uv",
+        "python-dotenv",
+        "Git"
+      ],
+      "overview": "A modular Python LLM application with resume screening, PDF/DOCX parsing, structured candidate evaluation and 384-dimensional embeddings as a foundation for semantic retrieval.",
+      "highlights": [
+        "Developed an 11-module Python application using the Groq API.",
+        "Parses PDF and DOCX resumes and job descriptions.",
+        "Uses Groq and Pydantic to produce structured JSON outputs.",
+        "Scores candidates based on technical skills, experience and education.",
+        "Generates 384-dimensional embeddings using all-MiniLM-L6-v2.",
+        "Explores generation settings including temperature and max_tokens.",
+        "Tracks token usage and handles API errors.",
+        "Uses uv for isolated Python dependency and environment management.",
+        "Loads API keys securely through environment variables."
+      ]
+    },
+    {
+      "name": "Pluto",
+      "category": "Full-Stack Social Network",
+      "tagline": "Facebook / Instagram-style real-time social platform",
+      "status": "Live platform",
+      "dates": "February 2026 – September 2026",
+      "links": {
+        "github": "https://github.com/ArpanBanik007/FullStack-Social-Media-MERN-",
+        "live": "https://pluto-alpha-ochre.vercel.app"
+      },
+      "tech_stack": [
+        "React",
+        "Redux Toolkit",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "Socket.IO",
+        "Cloudinary",
+        "JWT"
+      ],
+      "overview": "A full-featured MERN social network with real-time interactions, media uploads, a vertical short-video feed and social engagement features.",
+      "architecture": "React + Redux Toolkit → Express REST API and Socket.IO → MongoDB and Mongoose → Cloudinary",
+      "highlights": [
+        "Built 60+ REST APIs and 19 MongoDB models.",
+        "Implemented JWT authentication and profile management.",
+        "Integrated Cloudinary uploads with automatic cleanup of replaced images.",
+        "Created a Reels/Shorts-style vertical video feed with IntersectionObserver autoplay and infinite scrolling.",
+        "Implemented TTL-based video view tracking with 15-day expiry.",
+        "Added likes, nested comments, follow/unfollow, saved posts and watch history.",
+        "Implemented real-time like and comment synchronization using Socket.IO rooms and 25+ events.",
+        "Used optimistic UI updates for responsive interactions.",
+        "Organized asynchronous frontend state using 11 Redux Toolkit slices and thunks."
+      ]
+    }
+  ],
+  "portfolio_metrics": {
+    "live_deployed_platforms": 2,
+    "generative_ai_and_rag_systems": 3,
+    "rest_apis_architected": "150+",
+    "featured_projects": 5,
+    "note": "The two live platforms are Near It... and Pluto. The three AI projects are presented as AI repositories in the portfolio."
+  },
+  "languages": [
+    {
+      "language": "Bengali",
+      "proficiency": "Spoken"
+    },
+    {
+      "language": "Hindi",
+      "proficiency": "Spoken"
+    },
+    {
+      "language": "English",
+      "proficiency": "Spoken"
+    }
+  ],
+  "career_interests": [
+    "Full-Stack Web Development",
+    "MERN Stack Development",
+    "Python Backend Development",
+    "Generative AI",
+    "Retrieval-Augmented Generation (RAG)",
+    "LLM Applications",
+    "Agentic AI Systems",
+    "Backend Architecture and API Engineering"
+  ]
+}
